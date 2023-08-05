@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.testautomation</groupId>
 	<artifactId>azure-testplan-sdk</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>Azure Test Plan SDK</name>
 	<description>Java library to integrate your tests with Azure DevOps Test Plans</description>
 	<properties>
