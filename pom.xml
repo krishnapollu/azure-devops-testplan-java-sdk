@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.testautomation</groupId>
 	<artifactId>azure-testplan-sdk</artifactId>
-	<version>1.2.4</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>Azure Test Plan SDK</name>
 	<description>Java library to integrate your tests with Azure DevOps Test Plans</description>
 	<properties>
@@ -12,7 +12,13 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven-deploy-plugin.version>2.8</maven-deploy-plugin.version>
 	</properties>
-
+	<distributionManagement>
+	   <repository>
+	     <id>github</id>
+	     <name>GitHub krishnapollu Apache Maven Packages</name>
+	     <url>https://maven.pkg.github.com/krishnapollu/azure-testplan-sdk</url>
+	   </repository>
+	</distributionManagement>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
@@ -63,7 +69,10 @@
 			<encoding>Cp1252</encoding>
 		</configuration>
 	</plugin>
-
+	<plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8</version>
+        </plugin>
 	</plugins>
 	</build>
 
