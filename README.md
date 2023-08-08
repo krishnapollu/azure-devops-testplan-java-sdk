@@ -7,7 +7,7 @@ Java based SDK to integrate your automation test results to Azure DevOps Test Pl
 <dependency>
   <groupId>com.testautomation</groupId>
   <artifactId>azure-devops-testplan-java-sdk</artifactId>
-  <version>1.0.0</version>
+  <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
 
