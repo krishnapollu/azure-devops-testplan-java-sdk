@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.testautomation</groupId>
-	<artifactId>azure-testplan-sdk</artifactId>
+	<artifactId>azure-devops-testplan-java-sdk</artifactId>
 	<version>1.0.0</version>
 	<name>Azure Test Plan SDK</name>
 	<description>Java library to integrate your tests with Azure DevOps Test Plans</description>
