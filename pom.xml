@@ -16,7 +16,7 @@
 	   <repository>
 	     <id>github</id>
 	     <name>GitHub krishnapollu Apache Maven Packages</name>
-	     <url>https://maven.pkg.github.com/krishnapollu/azure-testplan-sdk</url>
+	     <url>https://maven.pkg.github.com/krishnapollu/azure-devops-testplan-java-sdk</url>
 	   </repository>
 	</distributionManagement>
 	<dependencies>
