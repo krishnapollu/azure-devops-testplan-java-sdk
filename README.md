@@ -3,7 +3,7 @@
 Java based SDK to integrate your automation test results to Azure DevOps Test Plan. Add this library to your pom.xml and use the methods to POST your test results to Azure DevOps. This SDK internally uses the Azure DevOps REST APIs to update the results to your project.
 
 ### Maven Dependency
-```
+```maven
 <dependency>
   <groupId>com.testautomation</groupId>
   <artifactId>azure-devops-testplan-java-sdk</artifactId>
@@ -15,7 +15,7 @@ Java based SDK to integrate your automation test results to Azure DevOps Test Pl
 The below snippets are to be added in your hooks or listeners so that this gets executed after each test case execution.
 
 Set basic details of your Azure DevOps server / project. To be set during the beginning of the execution.
-```
+```java
  //init config class
         AzureConfig.organization = "";
         AzureConfig.project = "";
@@ -27,7 +27,7 @@ The Azure DevOps Test Execution has the below hierarchy
 `` Test Plan --> Test Suite --> Test Run --> Test Results --> Test Points ``
 
 Setting the Test Suite Entity
-```
+```java
 TestSuiteEntity testSuiteEntity = new TestSuiteEntity();
         testSuiteEntity.setPlan_id(606035); // update with your Test Plan ID
         testSuiteEntity.setParentSuiteId(606036); // update with your Test Suite ID
@@ -36,7 +36,7 @@ TestSuiteEntity testSuiteEntity = new TestSuiteEntity();
 ```
 
 Creating a Test Run
-```
+```java
 //create testrun
         TestRunEntity testRunEntity = new TestRunEntity();
         testRunEntity.setTestPlanId(606035); // update with your Test Plan ID
@@ -45,7 +45,7 @@ Creating a Test Run
 ```
 
 Create a Test Result Entity against each Test Case you execute
-```
+```java
 //test case - 745460
         TestCaseEntity testCaseEntity1 = new TestCaseEntity();
         testCaseEntity1.setId(745460); // update with test case ID
@@ -76,13 +76,13 @@ Create a Test Result Entity against each Test Case you execute
 ```
 
 Now add the Test Result Entities to Test Run
-```
+```java
         TestResult.add(testResultEntity1, testRunEntity);
         TestResult.add(testResultEntity2, testRunEntity);
 ```
 
 Update the Test Run
-```
+```java
 testRunEntity = TestRun.update(testRunEntity, "Completed",
                 "Automated Test Run completed successfully.");
 ```
